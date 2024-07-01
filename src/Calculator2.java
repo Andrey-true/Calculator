@@ -73,10 +73,18 @@ public class Calculator2 {
             if (Integer.parseInt(data[1]) > 10) {
                 numb = true;
                 throw new Exception("Операнд больше 10");}
+            if (Integer.parseInt(data[0]) == 0) {
+                numb = true;
+                throw new Exception("Операнд  должен быть больше 0");}
+            if (Integer.parseInt(data[1]) == 0) {
+                numb = true;
+                throw new Exception("Операнд должен быть больше 0");}
 
 
 
-                                                                  //производим операции
+
+
+            //производим операции
             if (action.equals("+")) {
                 System.out.println("Ответ");
                 System.out.println(Integer.parseInt(data[0]) + Integer.parseInt(data[1]));
@@ -187,7 +195,6 @@ public class Calculator2 {
 
             }
         }
-
 
     }
 }
